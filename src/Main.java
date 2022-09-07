@@ -16,9 +16,7 @@ public class Main {
 
         boolean found=true;
         int index;
-        //System.out.println(word+"     "+text);
 
-        //System.out.println(arr[0].toString().equals(word));
         while (found){
             for (int i = 0; i < arr.length; i++) {
 
@@ -27,7 +25,7 @@ public class Main {
                     found=false;
                 }
             }
-            System.out.println(found);
+            //System.out.println(found);
 
             if (found){
                 System.out.println("The word is is not found.");
@@ -35,8 +33,6 @@ public class Main {
                 System.out.print("Please Enter a Word to Replace : ");
                 word = replaceWord.nextLine();
             }
-
-
 
         }
 
