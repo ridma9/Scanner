@@ -14,22 +14,32 @@ public class Main {
 
         String [] arr=text.split(" ");
 
-        boolean found=false;
+        boolean found=true;
         int index;
-        System.out.println(word+"     "+text);
+        //System.out.println(word+"     "+text);
 
         //System.out.println(arr[0].toString().equals(word));
-        for (int i = 0; i < arr.length; i++) {
+        while (found){
+            for (int i = 0; i < arr.length; i++) {
 
-            if (arr[i].toString().equals(word)){
-                index=i;
-                found=false;
-                break;
+                if (arr[i].toString().equals(word)){
+                    index=i;
+                    found=false;
+                }
             }
+            System.out.println(found);
+
+            if (found){
+                System.out.println("The word is is not found.");
+                replaceWord = new Scanner(System.in);
+                System.out.print("Please Enter a Word to Replace : ");
+                word = replaceWord.nextLine();
+            }
+
+
+
         }
-        if (found){
-            System.out.println("The word is is not found.");
-        }
+
 
         Scanner newWord = new Scanner(System.in);
         System.out.print("Please Enter a Word to Replace with : ");
@@ -42,9 +52,12 @@ public class Main {
                 arr[i]=neww;
             }
         }
+        String editedText="";
         for (String val:arr) {
-            System.out.print(val+" ");
+            editedText=editedText.concat(val);
         }
+        System.out.println(editedText);
+
 
 
 
